@@ -10,3 +10,4 @@ torchvision
 openai
 pypdf
 tqdm
+gunicorn
