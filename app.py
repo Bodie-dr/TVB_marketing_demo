@@ -12,8 +12,7 @@ from database.database import create_connection, create_schema
 from database.document_repository import get_project_names
 from database.config import REFERENCE_PHOTOS_FOLDER
 
-
-from Tekst_gen.tekst_model import genereer_factuurtekst
+from Tekst_gen.tekst_model import generate_text
 
 
 def initialize_database() -> None:
@@ -156,7 +155,7 @@ def validate_and_generate(
         )
 
     try:
-        resultaat = genereer_factuurtekst(
+        resultaat = generate_text(
             opdracht.strip(),
             document=document,
             style_text=style_text or "",
